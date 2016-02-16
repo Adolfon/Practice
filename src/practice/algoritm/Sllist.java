@@ -64,7 +64,7 @@ public class Sllist {
 			if(head.next==null) //Position not equal 0 but not further elements				
 				return false;
 			else if (index==0){//removing head or position 0
-				head=head.next; //just move the head make lose the element (Is not accesible)
+				head=head.next; //just move the head make lose the element (Is not accessible)
 			}
 		//More tha 1 element list
 		//helpers
@@ -95,14 +95,21 @@ public class Sllist {
 	}//traverse
 	
 	
-	//return from the kth element to the end of the list // NOT WORKING AS EXPECTED
-	
+	//return from the kth element to the end of the list // NOT WORKING AS EXPECTED it is difficult
+	//because when you return from the recursivity method (in this case) you are at the tail of the list
+	//but the number "i" gives you the length of the list and k where you want to start so I can not find
+	//a direct condition which prints the node info of the actual node. (I think I need another parameter 
+	//in the method that I can modify accordingly.
+	//the best way would be knowing the length of the list with a counter (ADT with it)
 	public static int ntoLast(Node head,int k){
+		//it reachs the end of the list
 		if (head==null)
-			return 0;		
-		int i=ntoLast(head.next,k)+1;		
-		if (i==k)
-			System.out.println("["+head.data+"]-->");
+			return 0;
+		int i=ntoLast(head.next,k)+1;	
+		Integer intValue=Integer.valueOf(head.data.toString());
+		if (i>=intValue.intValue()){
+			System.out.println("["+head.data+"]-->"+"i:k="+i+":"+k);
+		}
 		return i;
 	}
 	
@@ -115,12 +122,23 @@ public class Sllist {
 		sl.addToEnd("3");
 		sl.traverse();
 		int i=66; boolean b;
-		//This fails and I don't know why, everything works separately..
-		//b=sl.removeAt(0);b=sl.removeAt(1);b=sl.removeAt(2);b=sl.removeAt(3);
+		//This does not fails it is just the resulting list cannot erase inexisting positions
+	//		b=sl.removeAt(0);
+	//		sl.traverse();
+	//		b=sl.removeAt(1);
+	//		sl.traverse();
+	//		b=sl.removeAt(2);
+	//		sl.traverse();
+	//		b=sl.removeAt(3);
+	//		sl.traverse();
+		
+		
+		
+		
 		b=sl.removeAt(i);
 		System.out.println("Removed element: "+i+" (Starting from 0), Result: "+b);
 		sl.traverse();
-		//ntoLast(sl.head, 1); // NOT WORKING AS EXPECTED
+		ntoLast(sl.head, 33); // NOT WORKING AS EXPECTED (it prints 2 positions from the end)
 	}
 	
 	
