@@ -66,7 +66,7 @@ public class Sllist {
 			else if (index==0){//removing head or position 0
 				head=head.next; //just move the head make lose the element (Is not accessible)
 			}
-		//More tha 1 element list
+		//More than 1 element list
 		//helpers
 		int count=1;
 		Node aux,prev;
@@ -113,6 +113,55 @@ public class Sllist {
 		return i;
 	}
 	
+	//I went crazy the original question in CCI is:
+	//Implement an algorithm to find the kth to last element of a singly linked list.
+// You pass the list position and it will print the element in that position and the rest of the elements until the end (NULL)
+	//If you pass a positon bigger that the list itself then it will print the whole list..
+	public static int nthToLast(Node head, int k) {
+		if (head == null) {
+			return 0;
+		 }
+		 int i = nthToLast(head.next, k) + 1; //It will go over the whole list no matter what..
+		 if (i <= k) {
+			 System.out.println("Data: "+head.data+", i: "+i+", k: "+k);			 
+		 }	
+//		 if (i == k) {
+//			 System.out.println("Data: "+head.data+", i: "+i+", k: "+k);
+//			 //And If I want to the end of the list then put here the rest of the code until the end.. (I think...)
+//		 }	
+		 return i;
+	}//nthToLast
+
+	
+	//Using a wrapper
+	/*
+	 * We described earlier that the issue was that we couldn't simultaneously return a counter
+and an index. If we wrap the counter value with simple class (or even a single element
+array), we can mimic passing by reference.
+*/
+	
+		
+		class IntWrapper {
+			public int value = 0;
+			}
+		//You pass the position of the list and it returns the element (Node)	
+		 Node nthToLastR2(Node head, int k, IntWrapper i) {
+			 if (head == null) {
+				 return null;			
+			  }
+			 Node node = nthToLastR2(head.next, k, i);
+			 i.value = i.value + 1;
+			 if (i.value == k) { // We've found the kth element			
+				 return head;
+			 }
+			 return node;
+		 }//function
+		 
+
+//Each of these recursive solutions takes 0(n) space due to the recursive calls.
+
+	
+	
 	public static void main(String[] args){
 		
 		Sllist sl=new Sllist();
@@ -138,8 +187,28 @@ public class Sllist {
 		b=sl.removeAt(i);
 		System.out.println("Removed element: "+i+" (Starting from 0), Result: "+b);
 		sl.traverse();
-		ntoLast(sl.head, 33); // NOT WORKING AS EXPECTED (it prints 2 positions from the end)
-	}
+		ntoLast(sl.head, 33); // NOT WORKING AS EXPECTED (it prints 3 positions from the end)
+		
+		
+		//----------------- Trying the recursive method simulating pass by reference using an Object
+		//Print what we have...
+		sl.traverse();
+		System.out.println("------------");
+		//Node
+		Node nodee=sl.new Node();
+		sl.addToEnd("4");sl.addToEnd("5");
+		sl.traverse();
+		//You pass the position of the list and it returns the element (Node)
+		nodee=sl.nthToLastR2(sl.head, 6,sl.new IntWrapper());
+		if (nodee!=null)
+			System.out.println("Found: "+nodee.data);
+		else
+			System.out.println("Found: "+null);
+		System.out.println("------------");
+		// In this case would be from the 2nd element to the end (NULL) OK :)
+		nthToLast(sl.head, 2);
+		
+	}//main
 	
 	
 }//class Sllist
