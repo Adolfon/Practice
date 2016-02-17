@@ -212,40 +212,46 @@ array), we can mimic passing by reference.
 				 this.n1=n1;
 				 this.n2=n2;
 			 }
-		 }
+		 }//LinkedListNode
 		 
-		 LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
-				 
-				 /* We're done if both lists are null AND the carry value is 0 */
-				 
-				 if (l1 == null && l2 == null && carry == 0) {				 
-					 return null;
-				 }
-				 
-				  LinkedListNode result = new LinkedListNode(carry, null, null);
-				  
-				 
-				 /* Add value, and the data from 11 and 12 */				 
-				 int value = carry;//Initialized to carry value
-				 if (l1 != null) {
-					 value += l1.data;
-				  }
-				  if (l2 != null) {
-					  value += l2.data;
-				  }
-				  
-				  result.data = value % 10; /* Second digit of number */
-				 
-				 /* Recurse */
-				 if (l1 != null || l2 != null) {				 
-					 LinkedListNode more = addLists( l1 == null ? null : l1.next,
-													 l2 == null ? null : l2.next,
-													 value >= 10 ? 1 : 8);
-					result.setNext(more);
-				 }
-				 return result;
-}
-
+		 
+		 class AnotherList{
+			 
+			 //Now because the nodes are different I should create the structures  ...or perhaps copy the other...
+			 
+		 
+			 LinkedListNode addLists(Node l1, Node l2, int carry) {
+					 
+					 /* We're done if both lists are null AND the carry value is 0 */
+					 
+					 if (l1 == null && l2 == null && carry == 0) {				 
+						 return null;
+					 }
+					 
+					  LinkedListNode result = new LinkedListNode(carry, null, null);
+					  					 
+					 /* Add value, and the data from 11 and 12 */				 
+					 int value = carry;//Initialized to carry value
+					 if (l1 != null) {
+						 value += Integer.valueOf((String) l1.data);
+					  }
+					  if (l2 != null) {
+						  value += Integer.valueOf((String)l2.data);
+					  }
+					  
+					  result.data = value % 10; /* Second digit of number */
+					 
+					 /* Recurse */
+					 if (l1 != null || l2 != null) {				 
+						 LinkedListNode more = addLists( l1 == null ? null : l1.next,
+														 l2 == null ? null : l2.next,
+														 value >= 10 ? 1 : 8);
+						//Should be add to the LinkedList structure the node result. AddLinkedList.addNode(more);
+						result.setNext(more);//I think She meant add to the list another Node (which I think is a GEC just how it is the method now, u should not mix the Node class with the list class..)(Grave Error de Concepto)
+					 }
+					 return result;
+			 	}
+		 }//AnotherList class
 		 
 		 
 		 
