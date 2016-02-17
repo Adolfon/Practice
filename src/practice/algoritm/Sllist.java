@@ -158,9 +158,97 @@ array), we can mimic passing by reference.
 		 }//function
 		 
 
+		 
+		 //Now the iterative solution to nth element to the end of the list..
+		 //This method return the head of the sublist from the searched element to the end of the list
+		 //it uses to pointers the first to the k element and the other to the end of the list
+		 
+		 
+		 //I think this algorithm is all wrong you dont need 2 pointers for returning a sublist with the k-element as a head
+		 //On the other end if what you want to accomplish is to do a sublist of k elements from the k-element still this 
+		 // algorithm would be wrong but in that case you need 2 pointers, one from the head of the sublist or k-element and
+		 // the other delimiting the end of the list in the case k length is smaller than the number of elements from k to the 
+		 //end of the list.
+		 Node nthToLastIterative(Node head, int k) { //WRONG WRONG WRONG , COPIED DIRECTLY FROM THE BOOK....
+			 
+			 //bad input parameter check
+			 if (k <= 0) return null;			 
+			 Node p1 = head;			 
+			 Node p2 = head;
+			
+			 // Move p2 -forward k nodes into the list. (p2 pointer points to the k element)			 
+			 for (int i = 0; i < k - 1; i++) {			 
+				 if (p2 == null) return null; // Error check
+				 p2 = p2.next;
+			 }
+			 if (p2 == null) return null;
+			 /* Now, move pi and p2 at the same speed. When p2 hits the end,
+			 * pi will be at the right element. */
+			 while (p2.next != null) {
+				 p1 = p1.next;
+				 p2 = p2.next;
+			  }
+			 return p1;
+		}//function
+
+		 
+		 
+		 
 //Each of these recursive solutions takes 0(n) space due to the recursive calls.
 
-	
+//Sum to numbers represented by single digits in every Node.
+// the list are represented opposite to the value of the number (for example:number 712 would be list 2->1->7
+		 //Is decimal
+		
+		 class LinkedListNode{
+			 Integer carry,n1,n2,data;
+			 LinkedListNode next;
+			 
+			 public void setNext(LinkedListNode x){
+				 this.next=x;
+			 }
+			 LinkedListNode(Integer carry,Integer n1, Integer n2){
+				 this.carry=carry;
+				 this.n1=n1;
+				 this.n2=n2;
+			 }
+		 }
+		 
+		 LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
+				 
+				 /* We're done if both lists are null AND the carry value is 0 */
+				 
+				 if (l1 == null && l2 == null && carry == 0) {				 
+					 return null;
+				 }
+				 
+				  LinkedListNode result = new LinkedListNode(carry, null, null);
+				  
+				 
+				 /* Add value, and the data from 11 and 12 */				 
+				 int value = carry;//Initialized to carry value
+				 if (l1 != null) {
+					 value += l1.data;
+				  }
+				  if (l2 != null) {
+					  value += l2.data;
+				  }
+				  
+				  result.data = value % 10; /* Second digit of number */
+				 
+				 /* Recurse */
+				 if (l1 != null || l2 != null) {				 
+					 LinkedListNode more = addLists( l1 == null ? null : l1.next,
+													 l2 == null ? null : l2.next,
+													 value >= 10 ? 1 : 8);
+					result.setNext(more);
+				 }
+				 return result;
+}
+
+		 
+		 
+		 
 	
 	public static void main(String[] args){
 		
