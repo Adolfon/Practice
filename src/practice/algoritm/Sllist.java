@@ -254,8 +254,82 @@ array), we can mimic passing by reference.
 		 }//AnotherList class
 		 
 		 
+		 //Solutions from "http://stackoverflow.com/questions/2663115/how-to-detect-a-loop-in-a-linked-list"
+		 //Detect if a list has a loop  O(n) 
+		 
+		 boolean hasLoop(Node first) {
+			    Node slow = first;
+			    Node fast = first;
+
+			    while(fast != null && fast.next != null) {
+			        slow = slow.next;          // 1 hop
+			        fast = fast.next.next;     // 2 hops 
+
+			        if(slow == fast)  // fast caught up to slow, so there is a loop
+			            return true;
+			    }
+			    return false;  // fast reached null, so the list terminates
+			}
+		 
+		 
+		 //Best possible solution??  it is supposedly quicker than the given as good solution..
+		 
+		 public static boolean hasLoop2(Node root){
+			    if(root == null) return false;
+
+			    Node slow = root, fast = root;
+			    int taken = 0, limit = 2;
+
+			    while (fast.next != null) {
+			        fast = fast.next;
+			        taken++;
+			        if(slow == fast) return true;
+
+			        if(taken == limit){
+			            taken = 0;
+			            limit <<= 1;    // equivalent to limit *= 2;
+			            slow = fast;    // teleporting the turtle (to the hare's position) 
+			        }
+			    }
+			    return false;
+			}
+
+		 
+	//CCI book problem
+		 //Given a circular linked list, implement an algorithm which returns the node at the
+//		 beginning of the loop.
 		 
 	
+LinkedListNode FindBeginning(LinkedListNode head) {
+	LinkedListNode slow = head;
+	LinkedListNode fast = head;	
+	// Find meeting point. This will be LOOP_SIZE - k steps into the
+	// linked list. 
+	while (fast != null && fast.next != null) {
+		slow = slow.next;
+		fast = fast.next.next;
+		if (slow == fast) { // Collision
+			break;
+		}
+	 }	 	 
+	 /* Error check - no meeting point, and therefore no loop */
+	 if (fast == null || fast.next == null) {
+	  return null;
+	 }	 
+	 /* Move slow to Head. Keep fast at Meeting Point. Each are k
+	 * steps from the Loop Start. If they move at the same pace,
+	 * they must meet at Loop Start. */
+	 slow = head;
+	 while (slow != fast) {
+		slow = slow.next;
+		fast = fast.next;
+	
+	 }	 
+	 /* Both now point to the start of the loop. */
+	 return fast;
+ }//function
+
+	 	
 	public static void main(String[] args){
 		
 		Sllist sl=new Sllist();
