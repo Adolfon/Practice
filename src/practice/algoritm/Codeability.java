@@ -12,7 +12,7 @@ public class Codeability {
 
 A monotonic pair is a pair of integers (P, Q), such that 0 ≤ P ≤ Q < N and A[P] ≤ A[Q].
 
-The goal is to find the monotonic pair whose indices are the furthest apart. More precisely, we should maximize the value Q − P. 
+The goal is to find the monotonic pair whose indices are the farthest apart. More precisely, we should maximize the value Q − P. 
 It is sufficient to find only the distance.
 
 For example, consider array A such that:
