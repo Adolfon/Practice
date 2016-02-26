@@ -93,7 +93,7 @@ public class ComplementaryAlgth {
 	
 	
 	//Running in O(n) complexity, found in ("http://peter-braun.org/2012/01/algorithms-to-find-complemantary-pairs-of-numbers-in-an-array/");
-	public static long foo_opt( long k, int[ ] A )
+	public static long foo_opt( long k, long[ ] A )
 	{
 		//Array that I am going to scan O(1) , it is an array of complementary values of the given Array. 
 		//So I am going to search (scan) for those values in the given array (A) if does exist the the pair exists and I can
@@ -120,13 +120,19 @@ public class ComplementaryAlgth {
 	
 	
 	public static void main(String[] args){
-		int[] A={1,5,9,3};
+		long[] A={1,5,9,3};
+		int[] A2={1,5,9,3};
 		int search=10;
-		int n=comp_pairs2(search,A);
+		int n=comp_pairs2(search,A2);
 		System.out.println(n);
 		long n2=foo_opt(search,A);
 		System.out.println(n2);
 		
+		
+		long[] A3={1,5,9,3,1,5,7};		
+		int search2=6;
+		long n3=foo_opt(search2,A3);
+		System.out.println("Valor: "+n3);
 	}
 	
 	
