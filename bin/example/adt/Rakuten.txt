@@ -39,9 +39,10 @@ new things and accept new challenges. For example in my current job a new projec
 -------------------------------------------------------------------------------------------
 (4)*This question is for only those who have worked before* Have you ever changed your job? or are you trying to change 
 your job? Please tell us why.
-Yes, When I changed jobs in the past was mainly because I wanted to accept new projects or roles that I was interested in so 
-I could get the chance of exploring new approaches or perspectives of software development field and of course in most of 
-the cases I improved my working conditions while I was doing that as well.
+Yes, When I changed jobs in the past was mainly because I wanted to accept new projects or roles that I was interested in 
+at that time so I could get the chance of exploring new approaches or perspectives of software development field and of course in most of 
+the cases I improved my working conditions while I was doing that as well mainly because I was having more experience as well
+so that it is logic.
 
 
 
