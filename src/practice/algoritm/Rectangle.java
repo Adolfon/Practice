@@ -108,4 +108,6 @@ public class Rectangle {
 		 */
 	}
 
+	//Work in a solution with 8 input parameters ... (you just pass 8 and use only the ones you want adapting this 
+	//solution..
 }

@@ -32,8 +32,8 @@ computers, technology and science.
 I think one of my best attributes could be my adaptability,in life for example I have been living in 3 different countries 
 with a lot of daily challenges because of the culture and languages. Related to work I am always a person who enjoys learning 
 new things and accept new challenges. For example in my current job a new project arise and the client required an application
- in PHP, and even though I never use PHP in the past, I took the challenge to be the only one developing the most difficult 
- parts of the project in that language without any help.  
+ in PHP, and even though I never use PHP in the past, I took the challenge to be the only one developing in the team the most
+  difficult parts of the project in that language without any help.  
 
 
 -------------------------------------------------------------------------------------------
