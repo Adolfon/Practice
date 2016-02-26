@@ -1,0 +1,49 @@
+Questions:Approximately 2~4 minutes per question 
+
+(1) Could we have your name and the reason why you are interested 
+in Rakuten? 
+Hello my name is A.C and I am interested in Rakuten because living in Japan and working as a Software developer is 
+difficult not to hear about Rakuten reputation.If you like web development I think is one of the best places to go, on top
+of that Rakuten is using mostly open source technologies and I really like that.
+
+
+Last time I answered:
+1. Please tell us the motive for the application.
+First of all, I respect Rakuten as a company because they were able to accomplish so much in such a short time span. 
+Specifically to the position, Rakuten Ichiba is probably the most important division in the company. 
+I would love to work on and learn more about this successful e-commerce platform. 
+On top of this, I think I am a good match for this position not only because of my experience but most important 
+my adaptability and interest in technology.
+-------------------------------------------------------------------------------------------
+(2) Please tell us your technical background and how you will be able to contribute to the success of the company.
+Å@Å@If you already have work experience, please share that as well.
+
+I don't know if this is relevant but I was always interested in technology and computers as a matter of fact my first 
+programming experience was when I was 10 years old. I attend a course on Basic after school hours. Unfortunately computers 
+were expensive at that time and I could not afford one. Speaking about working experience I was able to work on different
+roles or perspectives since/such as computer seller, computer department maintenance, helpdesk, programmer, analyst/programmer, 
+project lead. I worked on different types of projects since small applications to big enterprise applications and I worked 
+alone and as a part of a big team etc.. I think I can contribute to Rakuten because of my experience and my passion about 
+computers, technology and science.
+
+
+-------------------------------------------------------------------------------------------
+(3) What is your greatest strength and how you leverage your strength for peak performance? Please give us an example.
+I think one of my best attributes could be my adaptability,in life for example I have been living in 3 different countries 
+with a lot of daily challenges because of the culture and languages. Related to work I am always a person who enjoys learning 
+new things and accept new challenges. For example in my current job a new project arise and the client required an application
+ in PHP, and even though I never use PHP in the past, I took the challenge to be the only one developing the most difficult 
+ parts of the project in that language without any help.  
+
+
+-------------------------------------------------------------------------------------------
+(4)*This question is for only those who have worked before* Have you ever changed your job? or are you trying to change 
+your job? Please tell us why.
+Yes, When I changed jobs in the past was mainly because I wanted to accept new projects or roles that I was interested in so 
+I could get the chance of exploring new approaches or perspectives of software development field and of course in most of 
+the cases I improved my working conditions while I was doing that as well.
+
+
+
+-------------------------------------------------------------------------------------------
+(5) What are your career goal and career plans? How does this job fit into your career plans?
