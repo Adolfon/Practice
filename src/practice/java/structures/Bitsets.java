@@ -2,7 +2,12 @@ package practice.java.structures;
 
 import java.util.BitSet;
 
-public class Bitsets {
+public class Bitsets{
+	
+	
+	public void test(){
+		
+	}
 
 	public static void main(String args[]) {
 	     BitSet bits1 = new BitSet(16);
