@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Complementary_Ready {
 
-	public static long complementValue( long k, long[ ] A )
+	public  long complementValue( long k, long[ ] A )
 	{		
 	  Map<Long, Long> C = new HashMap<Long, Long>( );
 	  long complement=0,aux=0;
@@ -34,8 +34,10 @@ public class Complementary_Ready {
 	public static void main(String[] args){
 		long[] A={1,5,9,3,7};		
 		int search=6;		
-		long n2=complementValue(search,A);
+		long n2=new Complementary_Ready().complementValue(search,A);
 		System.out.println(n2);
+		long n3=new Complementary_Ready().complementValue(6, new long[] {1,5,9,3,1,5,7});
+		System.out.println(n3);
 		
 	}
 	
