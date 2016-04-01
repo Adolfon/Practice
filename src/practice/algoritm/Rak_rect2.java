@@ -1,6 +1,6 @@
 package practice.algoritm;
 
-public class Rakuten2 {
+public class Rak_rect2 {
 	public int calcArea(int K, int L, int M, int N,
             int P, int Q, int R, int S) {
 
@@ -38,8 +38,8 @@ public static void main(String[] args){
 	
 	
 	//Positive X and Negative Y sector
-	int result=new Rakuten2().calcArea(-4,1,2,6,0,-1,4,3);
-	int result2=new Rakuten2().calcArea(20,6,-4,1,0,-1,4,3);
+	int result = new Rak_rect2().calcArea(-4,1,2,6,0,-1,4,3);
+	int result2=new Rak_rect2().calcArea(20,6,-4,1,0,-1,4,3);
 	System.out.println("Total Area Overlapped Negative Y ,positive X sector Area Result: "
 	+result+", res2: "+result2);
 }
