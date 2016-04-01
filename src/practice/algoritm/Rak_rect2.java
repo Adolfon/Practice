@@ -1,6 +1,9 @@
 package practice.algoritm;
 
 public class Rak_rect2 {
+	
+//===================================================================
+	
 	public int calcArea(int K, int L, int M, int N,
             int P, int Q, int R, int S) {
 
@@ -24,23 +27,23 @@ public class Rak_rect2 {
 		return (int) res_un;
 	else
 		return -1;
-		}
+	}//calcArea
 	
-	public long computeArea(int K, int L, int M, int N) {
-		//return Math.abs((M-K) * (N-L));//No negative Area just the value
+	public long computeArea(int K, int L, int M, int N) {		
 		return (M-K) * (N-L);
-}
+	}//computeArea
+
+//===================================================================
 
 
-
-
-public static void main(String[] args){
+	public static void main(String[] args){
+		
+		
+		//Positive X and Negative Y sector
+		int result = new Rak_rect2().calcArea(-4,1,2,6,0,-1,4,3);
+		int result2=new Rak_rect2().calcArea(2,6,-4,1,0,-1,4,3);//wrong values order ...cheating the algorithm in order to return wrong values..
+		System.out.println("Total Area Overlapped Negative Y ,positive X sector Area Result: "
+		+result+", res2: "+result2);
+	}//main
 	
-	
-	//Positive X and Negative Y sector
-	int result = new Rak_rect2().calcArea(-4,1,2,6,0,-1,4,3);
-	int result2=new Rak_rect2().calcArea(20,6,-4,1,0,-1,4,3);
-	System.out.println("Total Area Overlapped Negative Y ,positive X sector Area Result: "
-	+result+", res2: "+result2);
-}
-}
+}//Class
