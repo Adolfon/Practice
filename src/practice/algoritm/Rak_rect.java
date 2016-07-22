@@ -5,6 +5,7 @@ package practice.algoritm;
 //area===>>> long res_un== computeArea(K,L,M,N)+computeArea(P,Q,R,S)-computeArea(bl_x,bl_y,tr_x,tr_y); //line 25
 //Insert the overflow condition for that (line 25) sentence as well (return -1 in the case of res_un>Integer.MAX_VALUE)
 public class Rak_rect {
+	
 	public int calcArea(int K, int L, int M, int N,
             int P, int Q, int R, int S) {
 
@@ -29,16 +30,27 @@ public class Rak_rect {
 	
 	public long computeArea(int K, int L, int M, int N) {
 		return (M-K) * (N-L);
-}
-
-
-
-
-public static void main(String[] args){
+	}
 	
-	
-	//Positive X and Negative Y sector
-	long result3=new Rak_rect().calcArea(-4,1,2,6,0,-1,4,3);
-	System.out.println("Overlapped Negative Y ,positive X sector Area Result: "+result3);
-}
-}
+	// Testing method accessibility ==================
+
+		 void accessTest(){
+		    System.out.println("Now you can see me in a default access modifier..");
+		}
+		 
+		 protected void accessTest2(){
+			    System.out.println("Now you can see me in a protected access modifier..");
+		}
+		 
+		 public void accessTest3(){
+			    System.out.println("Now you can see me in a public access modifier..");
+		}
+	 
+	// Testing method accessibility ==================
+
+	public static void main(String[] args){			
+		//Positive X and Negative Y sector
+		long result3=new Rak_rect().calcArea(-4,1,2,6,0,-1,4,3);
+		System.out.println("Overlapped Negative Y ,positive X sector Area Result: "+result3);
+	}
+}//Class Rak_rect
