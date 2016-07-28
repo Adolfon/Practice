@@ -44,7 +44,7 @@ public class ComplementaryAlgth {
 	}
 	
 	//Second approach
-	// 1 Remove duplicates and count them
+	// 1 Remove duplicates and count them (second value)
 	//2 Now put the array values (without dups) in a TreeMap
 	// TreeMap log(n) for : containsKey, get, put and remove operations.
 	//TreeMap is not synchronized..
