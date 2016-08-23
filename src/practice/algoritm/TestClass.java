@@ -26,7 +26,7 @@ public class TestClass{
 		}
 		catch (RuntimeException e){
 			System.out.println("2");
-		return ;
+		//return ;
 		}
 		catch (Exception e){
 			System.out.println("3");
@@ -35,6 +35,10 @@ public class TestClass{
 			System.out.println("4");
 		}
 	System.out.println("5");
+	StringBuffer sbuff= new StringBuffer("it is this ");
+	StringBuilder sbldr= new StringBuilder("sb constructor");
+	sbuff.append("adding cosita, ");
+	System.out.println(sbuff.toString()+sbldr);
 	}
 }
 
